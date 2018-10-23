@@ -21,7 +21,10 @@
           <%= c.name %>
           <% end %>
           </td>
-          <td></td>
+          <td>
+          <%= link_to "Editar", edit_product_path(p) %>
+          <%= link_to "Eliminar", p, method: :delete, data: { confirm: "Seguro desea eliminar este producto? "} %>
+          </td>
         </tr>
         <% end %>
       </table>
